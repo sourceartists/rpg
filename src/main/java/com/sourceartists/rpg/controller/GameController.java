@@ -1,12 +1,19 @@
 package com.sourceartists.rpg.controller;
 
 import com.sourceartists.rpg.engine.GameEngine;
+import com.sourceartists.rpg.exception.HeroOvercomesDeathAndCrushesHisEnemy;
 import com.sourceartists.rpg.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
+import java.util.List;
+
 @RestController
 public class GameController {
+
+    public static final Integer MIN_SUPERBUFF_LEVEL = 75;
+    public static final Integer MIN_SUPERBUFF_MORALE = 8;
 
     @Autowired
     private GameEngine gameEngine;
@@ -27,12 +34,35 @@ public class GameController {
         }
     }
 
-    public void takeOverCastle(Hero hero, Castle castle){
+    public boolean defendCastle(Hero hero, Castle castle){
+        castle.startDefense(hero);
 
+        List<Hero> heroesArmy = hero.getAllies();
+        hero.castOffensiveSpell(heroesArmy);
+        hero.getArmyIntoPosition();
+
+        if(!castle.defenseStarted()){
+            return false;
+        }
+
+        while(hero.isAlive() || !castle.taken()){
+            castle.shootAtHeroAndHisArmy(hero);
+            gameEngine.attackTheCastle(hero,castle);
+        }
+
+        if(hero.isAlive()){return false;}
+
+        return true;
     }
 
-    public void heroDies(Hero hero){
+    public void heroDies(Hero hero, Enemy enemy) throws HeroOvercomesDeathAndCrushesHisEnemy {
+        Hit hit = gameEngine.hit(enemy, hero);
 
+        while(!hit.isCritical()){
+            hit = gameEngine.hit(enemy, hero);
+        }
+
+        enemy.performDeadlyFinalBlow();
     }
 
     public void openLootChest(Hero hero, Chest chest){
@@ -51,7 +81,17 @@ public class GameController {
     }
 
     public void gainBuff(Hero hero, BuffType buffType){
+        if(hero.getActiveBuff() != null){
+            return;
+        }
 
+        if(gameEngine.giveSuperBuff(hero.getLevel(), hero.getMoraleLevel())){
+            hero.setActiveBuff(new SuperBuff("super duper buff", buffType));
+
+            return;
+        }
+
+        hero.setActiveBuff(new Buff("normal duper buff", buffType));
     }
 
     public void fightTheBoss(Hero hero, Boss boss){
@@ -70,6 +110,25 @@ public class GameController {
     }
 
     public void breakIntoCastleAndSteal(Hero hero, Castle castle){
+        boolean mainDoorOpened = false;
 
+        for(Lockpick lockpick: hero.getLockpicks()){
+            boolean opened = gameEngine.attemptToOpenDoor(lockpick
+                    , hero.getLockpickingLevel());
+
+            if(opened){
+                mainDoorOpened = true;
+                break;
+            }
+        }
+
+        if(!mainDoorOpened){
+            return;
+        }
+
+        BigDecimal jeweleryWorth = gameEngine.stealFromJeweleryBox(castle, hero);
+        hero.addMoney(jeweleryWorth);
     }
+
+
 }

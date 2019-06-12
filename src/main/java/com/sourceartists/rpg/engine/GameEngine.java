@@ -32,7 +32,27 @@ public class GameEngine {
         return false;
     }
 
-    public boolean attemptToOpen(Lockpick lockpick, Integer hero, Integer chest) {
+    public final boolean attemptToOpen(Lockpick lockpick, Integer hero, Integer chest) {
         return false;
+    }
+
+    public boolean giveSuperBuff(Integer level, Integer moraleLevel) {
+        return false;
+    }
+
+    public boolean attemptToOpenDoor(Lockpick lockpick, Integer lockpickingLevel) {
+        return false;
+    }
+
+    public BigDecimal stealFromJeweleryBox(Castle castle, Hero hero) {
+        return null;
+    }
+
+    public void attackTheCastle(Hero hero, Castle castle) {
+
+    }
+
+    public Hit hit(Enemy enemy, Hero hero) {
+        return null;
     }
 }

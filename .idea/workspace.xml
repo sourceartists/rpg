@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df3db7e6-2d81-4eda-8c31-b770f04ea6da" name="Default Changelist" comment="" />
+    <list default="true" id="df3db7e6-2d81-4eda-8c31-b770f04ea6da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/exception/HeroOvercomesDeathAndCrushesHisEnemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Hit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/SuperBuff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/engine/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/engine/GameEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Buff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Buff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Castle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Castle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sourceartists/rpg/controller/GameControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sourceartists/rpg/controller/GameControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sourceartists/rpg/controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sourceartists/rpg/controller/GameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sourceartists/rpg/engine/GameEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sourceartists/rpg/engine/GameEngine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sourceartists/rpg/model/Buff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sourceartists/rpg/model/Buff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sourceartists/rpg/model/Castle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sourceartists/rpg/model/Castle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sourceartists/rpg/model/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sourceartists/rpg/model/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sourceartists/rpg/model/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sourceartists/rpg/model/Hero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sourceartists/rpg/controller/GameControllerTest.class" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,150 +34,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/controller/GameController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-24">
-              <caret line="45" column="23" lean-forward="true" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Chest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-              <folding>
-                <element signature="e#252#253#0" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#154#155#0" expanded="true" />
-                <element signature="e#182#183#0" expanded="true" />
-                <element signature="e#228#229#0" expanded="true" />
-                <element signature="e#262#263#0" expanded="true" />
-                <element signature="e#395#396#0" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Hero.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#635#636#0" expanded="true" />
-                <element signature="e#674#675#0" expanded="true" />
-                <element signature="e#739#740#0" expanded="true" />
-                <element signature="e#795#796#0" expanded="true" />
-                <element signature="e#839#840#0" expanded="true" />
-                <element signature="e#856#857#0" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
-                <element signature="e#584#585#0" expanded="true" />
-                <element signature="e#565#566#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
-                <element signature="e#654#655#0" expanded="true" />
-                <element signature="e#700#701#0" expanded="true" />
-                <element signature="e#542#543#0" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
-                <element signature="e#537#538#0" expanded="true" />
-                <element signature="e#569#570#0" expanded="true" />
-                <element signature="e#627#628#0" expanded="true" />
-                <element signature="e#669#670#0" expanded="true" />
-                <element signature="e#504#505#0" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
-                <element signature="e#991#992#0" expanded="true" />
-                <element signature="e#1023#1024#0" expanded="true" />
-                <element signature="e#1318#1319#0" expanded="true" />
-                <element signature="e#1347#1348#0" expanded="true" />
-                <element signature="e#1470#1471#0" expanded="true" />
-                <element signature="e#1499#1500#0" expanded="true" />
-                <element signature="e#2066#2067#0" expanded="true" />
-                <element signature="e#2118#2119#0" expanded="true" />
-                <element signature="e#2316#2317#0" expanded="true" />
-                <element signature="e#2369#2370#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/sourceartists/rpg/controller/GameControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="105" column="22" lean-forward="true" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Lockpick.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-              <folding>
-                <element signature="e#175#176#0" expanded="true" />
-                <element signature="e#518#519#0" expanded="true" />
-                <element signature="e#557#558#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Armor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Weapon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Spell.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/engine/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+            <state relative-caret-position="527">
+              <caret line="50" column="31" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#308#309#0" expanded="true" />
                 <element signature="e#335#336#0" expanded="true" />
-                <element signature="e#778#779#0" expanded="true" />
-                <element signature="e#806#807#0" expanded="true" />
+                <element signature="e#570#571#0" expanded="true" />
+                <element signature="e#597#598#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/controller/GameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/sourceartists/rpg/controller/GameControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="156" column="67" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -174,6 +82,16 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>any</find>
+      <find>openLootChest</find>
+      <find>spy</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -182,18 +100,22 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/HeroClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Power.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/BuffType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Buff.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Spell.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Boss.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Enemy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/AttackOutcome.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/engine/GameEngine.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Lockpick.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/sourceartists/rpg/controller/GameControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Hero.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Chest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/SuperBuff.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Buff.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Hero.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Castle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Hit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Enemy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/exception/HeroOvercomesDeathAndCrushedHisEnemy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/controller/GameController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/engine/GameEngine.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/sourceartists/rpg/controller/GameControllerTest.java" />
       </list>
     </option>
   </component>
@@ -204,9 +126,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-1292" />
+    <option name="y" value="-198" />
     <option name="width" value="2583" />
     <option name="height" value="1404" />
   </component>
@@ -215,6 +137,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -270,15 +194,6 @@
               <item name="rpg" type="b2602c69:ProjectViewProjectNode" />
               <item name="rpg" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpg" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rpg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rpg" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -300,11 +215,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
@@ -316,13 +230,14 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.sourceartists.rpg.controller" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.sourceartists.rpg.model" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sourceartists.rpg.model" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sourceartists.rpg.exception" />
       <recent name="com.sourceartists.rpg.model" />
     </key>
   </component>
@@ -338,7 +253,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GameControllerTest.shouldOpenLootAfterMultiAttempt">
+  <component name="RunManager" selected="JUnit.GameControllerTest.shouldOpenLootOnFirstAttempt">
+    <configuration name="GameControllerTest.shouldBreakIntoCastleAndStealJewelery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sourceartists.rpg.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sourceartists.rpg.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.sourceartists.rpg.controller.GameControllerTest" />
+      <option name="METHOD_NAME" value="shouldBreakIntoCastleAndStealJewelery" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameControllerTest.shouldDefendTheCastle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sourceartists.rpg.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sourceartists.rpg.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.sourceartists.rpg.controller.GameControllerTest" />
+      <option name="METHOD_NAME" value="shouldDefendTheCastle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameControllerTest.shouldKillBossWithCriticalHit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpg" />
       <extension name="coverage">
@@ -371,7 +318,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameControllerTest.shouldServiceMultipleCars" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameControllerTest.shouldOpenLootOnFirstAttempt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpg" />
       <extension name="coverage">
         <pattern>
@@ -381,7 +328,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.sourceartists.rpg.controller" />
       <option name="MAIN_CLASS_NAME" value="com.sourceartists.rpg.controller.GameControllerTest" />
-      <option name="METHOD_NAME" value="shouldServiceMultipleCars" />
+      <option name="METHOD_NAME" value="shouldOpenLootOnFirstAttempt" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -389,9 +336,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameControllerTest.shouldOpenLootOnFirstAttempt" />
+        <item itemvalue="JUnit.GameControllerTest.shouldDefendTheCastle" />
+        <item itemvalue="JUnit.GameControllerTest.shouldBreakIntoCastleAndStealJewelery" />
         <item itemvalue="JUnit.GameControllerTest.shouldOpenLootAfterMultiAttempt" />
         <item itemvalue="JUnit.GameControllerTest.shouldKillBossWithCriticalHit" />
-        <item itemvalue="JUnit.GameControllerTest.shouldServiceMultipleCars" />
       </list>
     </recent_temporary>
   </component>
@@ -406,50 +355,53 @@
       <option name="presentableId" value="Default" />
       <updated>1557054320632</updated>
       <workItem from="1557054323289" duration="14759000" />
-      <workItem from="1557159077557" duration="5332000" />
+      <workItem from="1557159077557" duration="5942000" />
+      <workItem from="1557655473871" duration="10623000" />
+      <workItem from="1558003324410" duration="21000" />
+      <workItem from="1558203471444" duration="7869000" />
+      <workItem from="1558553349710" duration="597000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GameControllerTest_shouldKillBossWithCriticalHit - 2019.05.06 at 15h 53m 05s.xml">
-      <configuration name="GameControllerTest.shouldKillBossWithCriticalHit" configurationId="JUnit" />
+    <history-entry file="GameControllerTest_shouldBreakIntoCastleAndStealJewelery - 2019.05.12 at 17h 27m 39s.xml">
+      <configuration name="GameControllerTest.shouldBreakIntoCastleAndStealJewelery" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameControllerTest_shouldKillBossWithCriticalHit - 2019.05.06 at 15h 54m 00s.xml">
-      <configuration name="GameControllerTest.shouldKillBossWithCriticalHit" configurationId="JUnit" />
+    <history-entry file="GameControllerTest_shouldOpenLootOnFirstAttempt - 2019.05.19 at 12h 55m 01s.xml">
+      <configuration name="GameControllerTest.shouldOpenLootOnFirstAttempt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameControllerTest_shouldKillBossWithCriticalHit - 2019.05.06 at 15h 55m 06s.xml">
-      <configuration name="GameControllerTest.shouldKillBossWithCriticalHit" configurationId="JUnit" />
+    <history-entry file="GameControllerTest_shouldOpenLootOnFirstAttempt - 2019.05.19 at 13h 05m 17s.xml">
+      <configuration name="GameControllerTest.shouldOpenLootOnFirstAttempt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameControllerTest_shouldKillBossWithCriticalHit - 2019.05.06 at 15h 55m 10s.xml">
-      <configuration name="GameControllerTest.shouldKillBossWithCriticalHit" configurationId="JUnit" />
+    <history-entry file="GameControllerTest_shouldDefendTheCastle - 2019.05.19 at 13h 16m 59s.xml">
+      <configuration name="GameControllerTest.shouldDefendTheCastle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameControllerTest_shouldKillBossWithCriticalHit - 2019.05.06 at 15h 55m 29s.xml">
-      <configuration name="GameControllerTest.shouldKillBossWithCriticalHit" configurationId="JUnit" />
+    <history-entry file="GameControllerTest_shouldDefendTheCastle - 2019.05.19 at 13h 17m 35s.xml">
+      <configuration name="GameControllerTest.shouldDefendTheCastle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameControllerTest_shouldKillBossWithCriticalHit - 2019.05.06 at 15h 55m 43s.xml">
-      <configuration name="GameControllerTest.shouldKillBossWithCriticalHit" configurationId="JUnit" />
+    <history-entry file="GameControllerTest_shouldDefendTheCastle - 2019.05.19 at 13h 17m 55s.xml">
+      <configuration name="GameControllerTest.shouldDefendTheCastle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameControllerTest_shouldOpenLootAfterMultiAttempt - 2019.05.06 at 18h 54m 23s.xml">
-      <configuration name="GameControllerTest.shouldOpenLootAfterMultiAttempt" configurationId="JUnit" />
+    <history-entry file="GameControllerTest_shouldDefendTheCastle - 2019.05.19 at 13h 19m 57s.xml">
+      <configuration name="GameControllerTest.shouldDefendTheCastle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameControllerTest_shouldOpenLootAfterMultiAttempt - 2019.05.06 at 18h 55m 39s.xml">
-      <configuration name="GameControllerTest.shouldOpenLootAfterMultiAttempt" configurationId="JUnit" />
+    <history-entry file="GameControllerTest_shouldOpenLootOnFirstAttempt - 2019.05.19 at 14h 40m 53s.xml">
+      <configuration name="GameControllerTest.shouldOpenLootOnFirstAttempt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameControllerTest_shouldOpenLootAfterMultiAttempt - 2019.05.06 at 18h 55m 59s.xml">
-      <configuration name="GameControllerTest.shouldOpenLootAfterMultiAttempt" configurationId="JUnit" />
+    <history-entry file="GameControllerTest_shouldOpenLootOnFirstAttempt - 2019.05.19 at 14h 41m 10s.xml">
+      <configuration name="GameControllerTest.shouldOpenLootOnFirstAttempt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameControllerTest_shouldOpenLootAfterMultiAttempt - 2019.05.06 at 18h 56m 32s.xml">
-      <configuration name="GameControllerTest.shouldOpenLootAfterMultiAttempt" configurationId="JUnit" />
+    <history-entry file="GameControllerTest_shouldOpenLootOnFirstAttempt - 2019.05.19 at 14h 42m 15s.xml">
+      <configuration name="GameControllerTest.shouldOpenLootOnFirstAttempt" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20091000" />
+    <option name="totallyTimeSpent" value="39811000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1721" height="935" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1722" height="936" extended-state="1" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24984948" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2593261" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -457,7 +409,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32876712" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39975095" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -467,8 +419,8 @@
       <window_info anchor="bottom" id="Spring" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32876712" />
+      <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -487,12 +439,27 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/sourceartists/rpg/controller/GameControllerTest.java</url>
-          <line>62</line>
+          <line>65</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/sourceartists/rpg/controller/GameControllerTest.java</url>
+          <line>194</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>castle.defenseStarted()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/HeroClass.java">
@@ -513,20 +480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Buff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Castle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -551,13 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Enemy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Boss.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -569,6 +515,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Lockpick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="e#175#176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -593,110 +556,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/engine/GameEngine.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Buff.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        <state relative-caret-position="221">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/SuperBuff.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Lockpick.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        <state relative-caret-position="34">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
           <folding>
-            <element signature="e#175#176#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#224#225#0" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Hero.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/math/BigDecimal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        <state relative-caret-position="152">
+          <caret line="1285" column="22" selection-start-line="1285" selection-start-column="22" selection-end-line="1285" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/exception/HeroOvercomesDeathAndCrushesHisEnemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Hit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding>
+            <element signature="e#89#90#0" expanded="true" />
+            <element signature="e#117#118#0" expanded="true" />
+            <element signature="e#206#207#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Enemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#635#636#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-            <element signature="e#795#796#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#856#857#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#542#543#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#991#992#0" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
-            <element signature="e#1318#1319#0" expanded="true" />
-            <element signature="e#1347#1348#0" expanded="true" />
-            <element signature="e#1470#1471#0" expanded="true" />
-            <element signature="e#1499#1500#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
-            <element signature="e#2118#2119#0" expanded="true" />
-            <element signature="e#2316#2317#0" expanded="true" />
-            <element signature="e#2369#2370#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Chest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Hero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#182#183#0" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#3541#3542#0" expanded="true" />
+            <element signature="e#3575#3576#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/model/Castle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding>
+            <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#203#204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/engine/GameEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/controller/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/sourceartists/rpg/controller/GameControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="105" column="22" lean-forward="true" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sourceartists/rpg/controller/GameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="45" column="23" lean-forward="true" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="156" column="67" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="67" />
         </state>
       </provider>
     </entry>

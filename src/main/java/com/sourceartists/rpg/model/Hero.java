@@ -21,6 +21,7 @@ public class Hero {
     private List<Lockpick> lockpicks;
     private Weapon equippedWeapon;
     private Castle castle;
+    private boolean alive;
 
     public Integer getLockpickingLevel() {
         return lockpickingLevel;
@@ -47,7 +48,7 @@ public class Hero {
     }
 
     public void addMoney(BigDecimal money){
-        this.money.add(money);
+        setMoney(this.money.add(money));
     }
 
     public List<Lockpick> getLockpicks() {
@@ -154,4 +155,23 @@ public class Hero {
         this.spells.add(generateSpecialSpell);
     }
 
+    public void castOffensiveSpell(List<Hero> heroesArmy) {
+
+    }
+
+    public void getArmyIntoPosition() {
+
+    }
+
+    public void attack(Castle castle) {
+
+    }
+
+    public void setAlive(boolean alive) {
+        this.alive = alive;
+    }
+
+    public boolean isAlive() {
+        return false;
+    }
 }

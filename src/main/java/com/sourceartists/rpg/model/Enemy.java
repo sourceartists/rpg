@@ -1,5 +1,7 @@
 package com.sourceartists.rpg.model;
 
+import com.sourceartists.rpg.exception.HeroOvercomesDeathAndCrushesHisEnemy;
+
 import java.util.List;
 
 public class Enemy {
@@ -57,5 +59,13 @@ public class Enemy {
 
     public void setSpells(List<Spell> spells) {
         this.spells = spells;
+    }
+
+    public Hit hit(Hero hero) {
+        return null;
+    }
+
+    public void performDeadlyFinalBlow() throws HeroOvercomesDeathAndCrushesHisEnemy {
+
     }
 }

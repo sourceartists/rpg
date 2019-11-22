@@ -4,5 +4,8 @@ public enum BuffType {
 
     DEFENSIVE,
     OFFENSIVE,
-    RESOURCE
+    RESOURCE,
+    INCREASED_STRENTH,
+    INCREASED_AGILITY,
+    INCREASED_SPEED
 }

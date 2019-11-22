@@ -5,6 +5,15 @@ import java.util.Objects;
 public class Lockpick {
 
     private Integer id;
+    private boolean used;
+
+    public boolean isUsed() {
+        return used;
+    }
+
+    public void setUsed(boolean used) {
+        this.used = used;
+    }
 
     public Lockpick(Integer id) {
         this.id = id;

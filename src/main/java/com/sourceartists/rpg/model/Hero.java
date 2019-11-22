@@ -8,8 +8,9 @@ public class Hero {
     private String name;
     private Integer level;
     private Integer moraleLevel;
-    private BigDecimal money = BigDecimal.valueOf(100);
+    private BigDecimal gold = BigDecimal.valueOf(100);
     private HeroClass heroClass;
+    private Integer strength;
 
     private Integer lockpickingLevel = Integer.valueOf(10);
 
@@ -22,6 +23,25 @@ public class Hero {
     private Weapon equippedWeapon;
     private Castle castle;
     private boolean alive;
+
+    public Hero() {
+    }
+
+    public Hero(BigDecimal gold) {
+        this.gold = gold;
+    }
+
+    public Integer getStrength() {
+        return strength;
+    }
+
+    public void setStrength(Integer strength) {
+        this.strength = strength;
+    }
+
+    public Hero(Integer gold) {
+        this.gold = BigDecimal.valueOf(gold);
+    }
 
     public Integer getLockpickingLevel() {
         return lockpickingLevel;
@@ -48,7 +68,7 @@ public class Hero {
     }
 
     public void addMoney(BigDecimal money){
-        setMoney(this.money.add(money));
+        setGold(this.gold.add(money));
     }
 
     public List<Lockpick> getLockpicks() {
@@ -79,12 +99,12 @@ public class Hero {
         this.level = level;
     }
 
-    public BigDecimal getMoney() {
-        return money;
+    public BigDecimal getGold() {
+        return gold;
     }
 
-    public void setMoney(BigDecimal money) {
-        this.money = money;
+    public void setGold(BigDecimal gold) {
+        this.gold = gold;
     }
 
     public HeroClass getHeroClass() {
@@ -173,5 +193,9 @@ public class Hero {
 
     public boolean isAlive() {
         return false;
+    }
+
+    public void addStrenth(int lowMoraleStrengthGain) {
+
     }
 }

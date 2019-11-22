@@ -1,25 +1,29 @@
 package com.sourceartists.rpg.controller;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.junit.jupiter.params.provider.Arguments.arguments;
+import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.*;
-import static org.mockito.ArgumentMatchers.*;
 
 import com.google.common.collect.Ordering;
 import com.sourceartists.rpg.engine.GameEngine;
+import com.sourceartists.rpg.exception.HeroIsAChickenExcpetion;
 import com.sourceartists.rpg.exception.HeroOvercomesDeathAndCrushesHisEnemy;
+import com.sourceartists.rpg.exception.HeroSlainedByDragonException;
 import com.sourceartists.rpg.model.*;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.*;
 import org.mockito.*;
-import org.mockito.invocation.InvocationOnMock;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-import java.util.concurrent.locks.Lock;
+import java.util.stream.Stream;
 
 class GameControllerTest {
 
@@ -48,6 +52,20 @@ class GameControllerTest {
         verify(gameEngineMock).generateRandomBuff();
 
         verify(gameEngineMock, never()).generateSpecialSpell();
+    }
+
+    @Test
+    public void shouldIncreaseLevelByOne_whenGainingLevel() throws Exception{
+        // Arrange
+        Hero hero = new Hero();
+        Integer initialHeroLevel = Integer.valueOf(14);
+        hero.setLevel(initialHeroLevel);
+
+        // Act
+        gameControllerSUT.levelUp(hero);
+
+        // Assert
+        assertThat(hero.getLevel()).isEqualTo(initialHeroLevel + 1);
     }
 
     @Test
@@ -105,13 +123,13 @@ class GameControllerTest {
                 .thenReturn(true);
 
         // Guard Assert
-        assertThat(hero.getMoney()).isEqualByComparingTo(BigDecimal.valueOf(100));
+        assertThat(hero.getGold()).isEqualByComparingTo(BigDecimal.valueOf(100));
 
         // Act
         gameControllerSUT.openLootChest(hero,chest);
 
         // Assert
-        assertThat(hero.getMoney()).isEqualByComparingTo(BigDecimal.valueOf(100).add(chest.getMoney()));
+        assertThat(hero.getGold()).isEqualByComparingTo(BigDecimal.valueOf(100).add(chest.getMoney()));
     }
 
     @Test
@@ -178,7 +196,7 @@ class GameControllerTest {
                 .thenReturn(true);
 
         // Guard Assert
-        assertThat(hero.getMoney()).isEqualTo(BigDecimal.valueOf(100));
+        assertThat(hero.getGold()).isEqualTo(BigDecimal.valueOf(100));
 
         // Act
         gameControllerSUT.breakIntoCastleAndSteal(hero, castle);
@@ -186,10 +204,11 @@ class GameControllerTest {
         // Assert
         verify(gameEngineMock, times(1)).attemptToOpenDoor(
                 any(Lockpick.class), eq(hero.getLockpickingLevel()));
-        assertThat(hero.getMoney()).isEqualTo(BigDecimal.valueOf(100).add(jeweleryWorth));
+        assertThat(hero.getGold()).isEqualTo(BigDecimal.valueOf(100).add(jeweleryWorth));
     }
 
     @Test
+    @Disabled
     public void shouldDefendTheCastle() throws Exception{
         // Arrange
         Hero hero = new Hero();
@@ -230,5 +249,88 @@ class GameControllerTest {
         // Assert
         assertThat(expectedException).isInstanceOf(HeroOvercomesDeathAndCrushesHisEnemy.class);
         assertThat(hero.isAlive()).isTrue();
+    }
+
+    @ParameterizedTest
+    @EnumSource(value = BuffType.class, mode = EnumSource.Mode.INCLUDE,
+            names = {"INCREASED_STRENTH" ,"INCREASED_AGILITY" ,"INCREASED_SPEED"})
+    public void shouldWinWithMightyDragon(BuffType activeBuff) throws Exception{
+        // Given
+        Hero hero = new Hero();
+        MightyDragon dragon = new MightyDragon();
+        hero.setActiveBuff(new Buff("Active buff", activeBuff));
+
+        given(gameEngineMock.fightWithDragon(hero, dragon))
+                .willReturn(true);
+
+        // When
+        boolean dragonSlained = gameControllerSUT.fightWithMightyDragon(hero, dragon);
+
+        // Then
+        assertThat(dragonSlained).isTrue();
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {1001,1500,2000})
+    public void shouldThrowException_whenHeroSlained_givenTryingToStealGold(
+            int goldAmountToSteal
+    ) throws Exception{
+        // Given
+        Hero hero = new Hero();
+        Dragon dragon = new Dragon();
+
+        given(gameEngineMock.fightWithDragon(hero, dragon))
+                .willThrow(new HeroSlainedByDragonException());
+
+        // When
+        assertThatThrownBy(() -> gameControllerSUT.stealGoldFromDragon(hero, dragon, goldAmountToSteal))
+        // Then
+                .isInstanceOf(HeroSlainedByDragonException.class);
+
+    }
+
+    @ParameterizedTest
+    @NullSource
+    @EmptySource
+    public void shouldThrowException_whenNoTreasureMeantToBeStolen(List<Treasure> treasures) throws Exception{
+        // Given
+        Hero hero = new Hero();
+        Dragon dragon = new Dragon();
+
+        // When
+        assertThatThrownBy(() -> gameControllerSUT.stealTreasureFromDragon(hero,dragon,treasures))
+                // Then
+                .isInstanceOf(HeroIsAChickenExcpetion.class);
+    }
+
+    static Stream<Arguments> shouldCountLoot(){
+        Treasure diamondTreasure = new Treasure(TreasureType.DIAMOND);
+        Treasure emeraldTreasure = new Treasure(TreasureType.EMERALD);
+        Treasure rubyTreasure = new Treasure(TreasureType.RUBY);
+
+        List<Treasure> treasuresOne = Arrays.asList(
+                new Treasure[]{diamondTreasure, emeraldTreasure});
+        List<Treasure> treasuresTwo = Arrays.asList(
+                new Treasure[]{diamondTreasure, emeraldTreasure, rubyTreasure});
+        List<Treasure> treasuresThree = Arrays.asList(
+                new Treasure[]{diamondTreasure, diamondTreasure, diamondTreasure});
+
+        return Stream.of(
+            arguments(treasuresOne, new Hero(1000), BigDecimal.valueOf(4500)),
+            arguments(treasuresTwo, new Hero(0), BigDecimal.valueOf(4000)),
+            arguments(treasuresThree, new Hero(1), BigDecimal.valueOf(7501))
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource
+    public void shouldCountLoot(List<Treasure> treasures, Hero hero,
+                                BigDecimal expectedLootWorth) throws Exception{
+        // When
+        BigDecimal lootWorth = gameControllerSUT.countLoot(treasures, hero);
+
+        // Then
+        assertThat(lootWorth)
+                .isEqualByComparingTo(expectedLootWorth);
     }
 }

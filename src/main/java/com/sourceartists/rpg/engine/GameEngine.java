@@ -1,9 +1,11 @@
 package com.sourceartists.rpg.engine;
 
+import com.sourceartists.rpg.exception.HeroSlainedByDragonException;
 import com.sourceartists.rpg.model.*;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Component
 public class GameEngine {
@@ -52,7 +54,25 @@ public class GameEngine {
 
     }
 
+
+
     public Hit hit(Enemy enemy, Hero hero) {
         return null;
+    }
+
+    public boolean fightWithDragon(Hero hero, Dragon dragon){
+        return false;
+    }
+
+    public boolean stealGold(Hero hero, Dragon dragon) {
+        return false;
+    }
+
+    public boolean stealTreasures(Hero hero, Dragon dragon, List<Treasure> treasures) {
+        return false;
+    }
+
+    public void fightDragonGuards(Hero hero, Dragon dragon) throws HeroSlainedByDragonException {
+
     }
 }

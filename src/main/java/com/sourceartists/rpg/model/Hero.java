@@ -198,4 +198,8 @@ public class Hero {
     public void addStrenth(int lowMoraleStrengthGain) {
 
     }
+
+    public List<String> prepareRequiredArmorPieces() {
+        return null;
+    }
 }

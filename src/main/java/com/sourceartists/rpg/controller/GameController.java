@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.*;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Random;
@@ -24,20 +25,54 @@ public class GameController {
     @Autowired
     private GameEngine gameEngine;
 
+    private static final Integer EXTRA_MONEY_CYCLE = 5;
+    private static final Integer FAME_GAIN = 10;
+
     public void levelUp(Hero hero){
         hero.setLevel(hero.getLevel() + 1);
 
-        if(hero.getLevel() % 10 == 0){
-            hero.addSpell(gameEngine.generateSpecialSpell());
-        }
-
-        if(hero.getLevel() % 5 == 0){
+        if(hero.getLevel() % EXTRA_MONEY_CYCLE == 0)
             hero.addMoney(gameEngine.generateBonusMoney());
+
+        if(gameEngine.didHeroAchieveRemarkableThings(hero))
+            hero.addSpell(gameEngine.generateSpecialSpell());
+            hero.setLevel(hero.getLevel() + 1);
+
+        for(Monster monster: hero.getMostersSlainedLastLevel)
+            hero.addReputation(monster.getReputationGain());
+            hero.addFame(FAME_GAIN);
+    }
+
+
+
+    private AuthenticationDao authenticationDao;
+
+    public User authenticate(String username, String password){
+        String encryptedPassword = encryptPassword(password);
+        User authenticatedUser = authenticationDao.findUserByNameAndPassword(username, encryptedPassword);
+
+        if(authenticatedUser == null){
+            throw new UserNotFoundException();
         }
 
-        if(hero.getActiveBuff() == null){
-            hero.setActiveBuff(gameEngine.generateRandomBuff());
+        return authenticatedUser;
+    }
+
+    public boolean defendFortress(Hero hero, Castle castle,
+                                  List<Hero> enemyArmy){
+        if(enemyArmy.size() < 100
+                || enemyArmy.stream()
+                            .anyMatch(enemy -> enemy.getName().equals("General"))){
+            return true;
         }
+
+        if(hero.getMoraleLevel() <= 1
+                && castle.getOuterWalls() == null
+                && hero.getAllies().size() < 5){
+            return false;
+        }
+
+        castle.startDefense(hero, enemyArmy);
     }
 
     public boolean defendCastle(Hero hero, Castle castle){
@@ -73,30 +108,21 @@ public class GameController {
 
     public void openLootChest(Hero hero, Chest chest){
         for(Lockpick lockpick: hero.getLockpicks()){
-            boolean opened = attemptToOpen(lockpick
-                    , hero.getLockpickingLevel());
+            boolean isNotOpened = attemptToOpen(lockpick, chest);
 
-            hero.increaseLockpicking();
-
-            if(opened){
+            if(!isNotOpened){
                 hero.addMoney(chest.getMoney());
                 return;
             }
         }
     }
 
-    private boolean attemptToOpen(Lockpick lockpick, Integer lockpickingLevel){
-        if(lockpick.isUsed()){
-            if(lockpickingLevel > 80){
-                return true;
-            }
+    private boolean attemptToOpen(Lockpick lockpick, Chest chest){
+        if(!lockpick.isUsed()){
+            return chest.tryToOpen(lockpick, MODE.HARD);
         }else{
-            if(lockpickingLevel > 30){
-                return true;
-            }
+            return chest.tryToOpen(lockpick, MODE.EASY);
         }
-
-        return false;
     }
 
     public void gainBuff(Hero hero, BuffType buffType){
@@ -207,6 +233,58 @@ public class GameController {
         return treasures.stream()
                 .map(treasure -> treasure.getTreasureType().getWorth())
                 .reduce(lootWorth, (totalWorth, treasureWorth) -> totalWorth.add(treasureWorth));
+    }
+
+    public void acquireKnighthood(King king, Hero hero){
+
+    }
+
+    public Receipt upgradeArmor(Merchant merchant, Hero hero){
+        List<String> armorPieces = hero.prepareRequiredArmorPieces();
+
+        Double totalPrice = armorPieces.stream()
+                .map(armorPiece ->
+                    merchant.availableProducts().stream()
+                        .filter(product -> product.getName() == armorPiece)
+                        .findFirst()
+                        .orElse(Product.ARMOR)
+                )
+                .map(merchantProduct -> merchantProduct.getPrice())
+                .reduce(0.0, Double::sum);
+
+        return new Receipt("Receipt value: " + totalPrice.toString() + "gold");
+    }
+
+    public boolean loadLastSavedGame(){
+        boolean worldStateLoaded = gameEngine.loadCurrentState();
+        boolean heroStateLoaded = gameEngine.loadCurrentHeroDetails();
+        boolean missionsLoaded = gameEngine.loadMissionsState();
+        boolean journalLoaded = false;
+
+        try(BufferedReader br = new BufferedReader(new FileReader("journal.txt"))) {
+            StringBuilder journalBuilder = new StringBuilder();
+            for(String line; (line = br.readLine()) != null; ) {
+                journalBuilder.append(line);
+            }
+            journalLoaded = gameEngine.loadJournal(journalBuilder.toString());
+        } catch (IOException e) {
+            // error handling
+        }
+
+        return worldStateLoaded && heroStateLoaded
+                && missionsLoaded && journalLoaded;
+    }
+
+    public void payTributeToTheHero(List<GratefulPerson> gratefulPeople,
+                                    Hero hero){
+        String listOfGifts = "";
+        for(GratefulPerson gratefulPerson: gratefulPeople){
+            Gift gift = gratefulPerson.giveGift();
+            gameEngine.addGiftToHeroTreasureChest(hero, gift);
+            listOfGifts += gift.getName() + ": " + gift.getValue();
+        }
+
+        gameEngine.logListOfGiftsInJournal(hero, listOfGifts);
     }
 
 
